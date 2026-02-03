@@ -2,28 +2,28 @@
 
 @font-face {
   font-family: 'Abduction';
-  src: url('/fonts/abduction2002.ttf') format('truetype');
+  src: url('./fonts/abduction2002.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Space Grotesk';
-  src: url('/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+  src: url('./fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Megatrans';
-  src: url('/fonts/Megatrans-Regular.otf') format('truetype');
+  src: url('./fonts/Megatrans-Regular.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 } 
 
 @font-face {
   font-family: 'Guardian Angle';
-  src: url('/fonts/Guardian Angle Straight.otf') format('truetype');
+  src: url('./fonts/Guardian Angle Straight.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

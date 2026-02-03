@@ -6,7 +6,7 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '/codebrew-2026/',
   plugins: [
     react(),
     tailwindcss(),
