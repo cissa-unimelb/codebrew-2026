@@ -7,10 +7,33 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Megatrans';
+  src: url('/fonts/Megatrans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} 
+
+@font-face {
+  font-family: 'Guardian Angle';
+  src: url('/fonts/Guardian Angle Straight.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme {
   --font-abduction: 'Abduction', sans-serif;
-  --font-code: 'Courier New', monospace;
-
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+  --font-megatrans: 'Megatrans', sans-serif;
+  --font-guardian-angle: 'Guardian Angle', sans-serif;
+  
   --color-blue: #0000FF;
   --color-red: #FF0000;
   --color-green: #00FF00;
