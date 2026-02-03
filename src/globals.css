@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Abduction';
+  src: url('/fonts/abduction2002.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-abduction: 'Abduction', sans-serif;
+  --font-code: 'Courier New', monospace;
+
+  --color-blue: #0000FF;
+  --color-red: #FF0000;
+  --color-green: #00FF00;
+  --color-cyan: #00F6FF;
+  --color-offblack: #0A0512;
+  --color-darkgrey: #313131;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+
