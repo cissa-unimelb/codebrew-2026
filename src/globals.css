@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Megatrans';
-  src: url('/fonts/Megatrans-Regular.ttf') format('truetype');
+  src: url('/fonts/Megatrans-Regular.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 } 
