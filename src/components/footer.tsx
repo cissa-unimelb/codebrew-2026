@@ -5,7 +5,7 @@ export default function Footer() {
     <img 
       src={footerImage}
       alt="Locked decoration"
-      style={{ position: "fixed", bottom: 0, left: 0, maxWidth: "1800px"}}
+      style={{ position: "fixed", bottom: 0, left: 0, maxWidth: "1500px"}}
       className="w-9/10 z-0"
     />
   );
