@@ -20,12 +20,12 @@ export default function Header() {
                 </span>
                 <img src={codebrewLogo} alt="Codebrew logo" className="w-10 h-10" />
             </div>
-            <div className="absolute top-[25%] left-[6%] flex flex-col gap-[1.2vw]">
-                <span className="font-guardian-angle text-white text-[3vw] leading-none">
+            <div className="absolute top-[25%] left-[6%] flex flex-col gap-[1em]">
+                <span className="font-guardian-angle text-white leading-none" style={{ fontSize: 'min(3vw, 350%)' }}>
                     ABOUT
                 </span>
 
-                <span className="font-guardian-angle text-[#C6FF00] text-[3vw] leading-none">
+                <span className="font-guardian-angle text-[#C6FF00] leading-none" style={{ fontSize: 'min(3vw, 350%)' }}>
                     CODEBREW
                 </span>
             </div>
