@@ -22,7 +22,7 @@
   src: url('/fonts/Megatrans-Regular.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
-} 
+}
 
 @font-face {
   font-family: 'Guardian Angle';
@@ -36,7 +36,7 @@
   --font-space-grotesk: 'Space Grotesk', sans-serif;
   --font-megatrans: 'Megatrans', sans-serif;
   --font-guardian-angle: 'Guardian Angle', sans-serif;
-  
+
   --color-blue: #0000FF;
   --color-red: #FF0000;
   --color-green: #00FF00;
@@ -44,6 +44,7 @@
   --color-offblack: #0A0512;
   --color-darkgrey: #313131;
   --color-primary: #0E0F14;
+  --color-text: #E5E7E8;
 }
 
 body {
@@ -51,13 +52,10 @@ body {
   padding: 0;
   height: 100%;
   background: var(--color-primary);
-  color: white;
+  color: var(--color-text);
   overflow-x: hidden;
 }
 
 #root {
   height: 100%;
 }
-
-
-
