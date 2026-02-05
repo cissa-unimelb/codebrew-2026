@@ -5,7 +5,7 @@ import '../globals.css';
 export default function Header() {
     return (
         <div
-            style={{ position: "fixed", top: 0, right: 0, maxWidth: "1500px" }}
+            style={{ position: "fixed", top: 0, right: 0, maxWidth: "1000px" }}
             className="w-[90%] z-0 relative"
         >
             <img
@@ -20,7 +20,7 @@ export default function Header() {
                 </span>
                 <img src={codebrewLogo} alt="Codebrew logo" className="w-10 h-10" />
             </div>
-            <div className="absolute top-[25%] left-[6%] flex flex-col gap-[1em]">
+            <div className="absolute top-[23%] left-[6%] flex flex-col gap-[1em]">
                 <span className="font-guardian-angle text-white leading-none" style={{ fontSize: 'min(3vw, 350%)' }}>
                     ABOUT
                 </span>
