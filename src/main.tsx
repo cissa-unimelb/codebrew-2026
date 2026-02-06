@@ -18,18 +18,18 @@ createRoot(document.getElementById('root')!).render(
     <div className="flex flex-col min-h-screen relative ">
       <Header />
 
-      <main className="flex grow flex-col justify-center z-10 relative w-full mt-[-30vh] mb-[20vh]">
+      <main className="flex grow flex-col justify-center z-10 relative w-full mt-[-55vh] mb-[25vh]">
       
         <div className="px-[12.5%] flex flex-col gap-y-4 mx-full ">
 
           <div className="flex flex-col gap-y-[0.25em]">
-            <h2 className="font-megatrans text-4xl tracking-wide font-light">WHAT IS THIS EVENT?</h2>
+            <h2 className="font-megatrans text-[2.5vw] tracking-wide ml-[-3vw]">WHAT IS THIS EVENT?</h2>
             <div className="flex flex-row items-baseline gap-x-[2em]">
-              <span className="text-[10px] pt-[0.4em] opacity-90 flex-shrink-0">
+              <span className="text-[1.2vw] pt-[0.4em] opacity-90 flex-shrink-0">
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-sm opacity-90 leading-relaxed">
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -38,7 +38,7 @@ createRoot(document.getElementById('root')!).render(
           </div>
 
           <div className="flex flex-col">
-            <h2 className="font-megatrans text-4xl tracking-wide font-light">WHAT IS INCLUDED?</h2>
+            <h2 className="font-megatrans text-[2.5vw] tracking-wide ml-[-3vw]">WHAT IS INCLUDED?</h2>
           </div>
 
 
@@ -69,38 +69,38 @@ createRoot(document.getElementById('root')!).render(
           </div>
 
           <div className="flex flex-col">
-            <h2 className="font-megatrans text-4xl tracking-wide font-light">WHAT CAN I GET OUT OF IT?</h2>
+            <h2 className="font-megatrans text-[2.5vw] tracking-wide ml-[-3vw]">WHAT CAN I GET OUT OF IT?</h2>
             <div className="flex flex-row items-baseline gap-x-[2em]">
-              <span className="text-[10px] pt-[0.4em] opacity-90 flex-shrink-0">
+              <span className="text-[1vw] pt-[0.4em] opacity-90 flex-shrink-0">
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-sm opacity-90 leading-relaxed">
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               </p>
 
-              <span className="text-[10px] pt-[0.4em] opacity-90 flex-shrink-0">
+              <span className="text-[1vw] pt-[0.4em] opacity-90 flex-shrink-0">
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-sm opacity-90 leading-relaxed">
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               </p>
             </div>
             <div className="flex flex-row items-baseline gap-x-[2em]">
-              <span className="text-[10px] pt-[0.4em] opacity-90 flex-shrink-0">
+              <span className="text-[1vw] pt-[0.4em] opacity-90 flex-shrink-0">
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-sm opacity-90 leading-relaxed">
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               </p>
 
-              <span className="text-[10px] pt-[0.4em] opacity-90 flex-shrink-0">
+              <span className="text-[1vw] pt-[0.4em] opacity-90 flex-shrink-0">
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-sm opacity-90 leading-relaxed">
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               </p>
             </div>
