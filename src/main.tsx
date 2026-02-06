@@ -18,7 +18,7 @@ createRoot(document.getElementById('root')!).render(
     <div className="flex flex-col min-h-screen relative ">
       <Header />
 
-      <main className="flex grow flex-col justify-center z-10 relative w-full mt-[-55vh] mb-[25vh]">
+      <main className="flex grow flex-col justify-center z-100 relative w-full mt-[-55vh] mb-[25vh]">
       
         <div className="px-[12.5%] flex flex-col gap-y-4 mx-full ">
 
@@ -44,28 +44,27 @@ createRoot(document.getElementById('root')!).render(
 
           <div className="grid grid-cols-4 gap-6 w-full">
             {cardData.map((card, i) => (
-              <div key={i} className="relative w-full aspect-square">
+            <div key={i} className="group relative w-full aspect-square cursor-pointer">
+              
+              <img
+                src={aboutSquare}
+                alt=""
+                className="absolute inset-0 w-[90%] h-full object-fill transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(198,255,0,0.8)]"
+              />
 
-                <img
-                  src={aboutSquare}
-                  alt=""
-                  className="absolute inset-0 w-[90%] h-full object-fill transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(198,255,0,0.8)]"
-                />
-                <div className="absolute inset-0 w-[90%] h-full pointer-events-none">
-                  
-                  <h3 className="absolute top-[3%] left-[6%] font-megatrans text-[clamp(0.8rem,1.4vw,1.8rem)] uppercase font-bold leading-none text-primary">
-                    {card.title}
-                  </h3>
+              <div className="absolute inset-0 w-[90%] h-full pointer-events-none">
+                <h3 className="absolute top-[3%] left-[6%] font-megatrans text-[clamp(0.8rem,1.4vw,1.8rem)] uppercase font-bold leading-none text-primary">
+                  {card.title}
+                </h3>
 
-                  <div className="absolute top-[22%] bottom-[12%] left-[15%] right-[15%] flex items-center justify-center">
-                    <p className="font-space-grotesk text-[clamp(0.1rem,0.75vw,1rem)] text-text opacity-90 leading-normal text-center">
-                      {card.text}
-                    </p>
-                  </div>
-
+                <div className="absolute top-[22%] bottom-[12%] left-[15%] right-[15%] flex items-center justify-center">
+                  <p className="font-space-grotesk text-[clamp(0.1rem,0.75vw,1rem)] text-text opacity-90 leading-normal text-center">
+                    {card.text}
+                  </p>
                 </div>
               </div>
-            ))}
+            </div>
+          ))}
           </div>
 
           <div className="flex flex-col">
