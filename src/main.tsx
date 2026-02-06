@@ -18,9 +18,9 @@ createRoot(document.getElementById('root')!).render(
     <div className="flex flex-col min-h-screen relative ">
       <Header />
 
-      <main className="flex grow flex-col justify-center z-10 relative w-full pt-[10vh]">
+      <main className="flex grow flex-col justify-center z-10 relative w-full mt-[-30vh] mb-[20vh]">
       
-        <div className="px-[12.5%] flex flex-col gap-y-4 mx-full max-h-[55vh] overflow-y-auto">
+        <div className="px-[12.5%] flex flex-col gap-y-4 mx-full ">
 
           <div className="flex flex-col gap-y-[0.25em]">
             <h2 className="font-megatrans text-4xl tracking-wide font-light">WHAT IS THIS EVENT?</h2>
@@ -49,8 +49,7 @@ createRoot(document.getElementById('root')!).render(
                 <img
                   src={aboutSquare}
                   alt=""
-
-                  className="absolute inset-0 w-[90%] h-full object-fill"
+                  className="absolute inset-0 w-[90%] h-full object-fill transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(198,255,0,0.8)]"
                 />
                 <div className="absolute inset-0 w-[90%] h-full pointer-events-none">
                   

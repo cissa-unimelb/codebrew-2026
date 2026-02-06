@@ -5,7 +5,7 @@ import '../globals.css';
 export default function Header() {
     return (
 
-        <div className="fixed top-0 right-0 w-full flex justify-end pointer-events-none z-20">
+        <div className="top-0 right-0 w-full flex justify-end pointer-events-none z-20 position-absolute">
             <div
                 style={{ maxWidth: "1000px" }}
                 className="w-[90%] z-0 relative pointer-events-auto"
