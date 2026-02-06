@@ -18,9 +18,9 @@ createRoot(document.getElementById('root')!).render(
     <div className="flex flex-col min-h-screen relative ">
       <Header />
 
-      <main className="flex grow flex flex-col justify-center z-10 relative w-full pt-5 gap-y-8 pt-[10%] pb-[10%]">
+      <main className="flex grow flex-col justify-center z-10 relative w-full pt-[10vh]">
       
-        <div className="pl-[12.5%] pr-[12.5%] flex flex-col gap-y-4">
+        <div className="px-[12.5%] flex flex-col gap-y-4 mx-full max-h-[55vh] overflow-y-auto">
 
           <div className="flex flex-col gap-y-[0.25em]">
             <h2 className="font-megatrans text-4xl tracking-wide font-light">WHAT IS THIS EVENT?</h2>
