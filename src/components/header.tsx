@@ -17,17 +17,17 @@ export default function Header() {
                 />
 
                 <div className="absolute top-[3%] left-[3%] flex items-center gap-[2vw]">
-                    <span className="font-guardian-angle text-white text-[3.5vw] leading-none">
+                    <span className="font-guardian-angle text-white text-[min(5vh,3vw)] leading-none">
                         CODEBREW
                     </span>
                     <img src={codebrewLogo} alt="Codebrew logo" className="w-[4vw] max-w-[100px] h-auto" />
                 </div>
 
-                <div className="absolute top-[20%] left-[4%] flex flex-col gap-[0.8vw] max-w-[75%]">
-                    <span className="font-guardian-angle text-white leading-none" style={{ fontSize: '3.5vw' }}>
+                <div className="absolute top-[20%] left-[4%] flex flex-col gap-[0.8vw] max-w-[100%]">
+                    <span className="font-guardian-angle text-white leading-none" style={{ fontSize: 'min(5vh,3vw' }}>
                         ABOUT
                     </span>
-                    <span className="font-guardian-angle text-[#C6FF00] leading-none" style={{ fontSize: '3.5vw' }}>
+                    <span className="font-guardian-angle text-[#C6FF00] leading-none" style={{ fontSize: 'min(5vh, 3vw)' }}>
                         CODEBREW
                     </span>
                 </div>
