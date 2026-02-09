@@ -1,25 +1,22 @@
-import NavBar from "./components/navbar"
-
-import LandingPanel from "./panels/landing"
-import AboutPanel from "./panels/about"
-import SponsorsPanel from "./panels/sponsors"
-import ThemesPanel from "./panels/themes"
-import TimelinePanel from "./panels/timeline"
-import WorkshopsPanel from "./panels/workshop"
-import FAQPanel from "./panels/faq"
+import { Link } from 'react-router-dom';
 
 
-export default function App() {
+export default function Home() {
     return (
-        <div>
-            <NavBar />
-            <LandingPanel/>
-            <section id="about" className="scroll-mt-14"><AboutPanel/></section>
-            <section id="themes" className="scroll-mt-14"><ThemesPanel/></section>
-            <section id="timeline" className="scroll-mt-14"><TimelinePanel/></section>
-            <section id="workshops" className="scroll-mt-14"><WorkshopsPanel/></section>
-            <section id="sponsors" className="scroll-mt-14"><SponsorsPanel/></section>
-            <section id="faq" className="scroll-mt-14"><FAQPanel/></section>
+        <div className="flex flex-col min-h-screen">
+            <main className="flex-grow flex flex-col items-center justify-center bg-black text-white px-4">
+                <h1 className="font-megatrans text-6xl md:text-8xl mb-6 tracking-tighter">
+                    CODEBREW
+                </h1>
+
+                <Link
+                    to="/about"
+                    className="group relative px-8 py-4 bg-primary text-black font-bold uppercase tracking-widest transition-all hover:bg-white font-space-grotesk text-lg"
+                >
+                    <span className="relative z-10">ABOUT</span>
+                    <div className="absolute inset-0 bg-primary blur-md opacity-0 group-hover:opacity-50 transition-opacity" />
+                </Link>
+            </main>
         </div>
-    )
+    );
 }

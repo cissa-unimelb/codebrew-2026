@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@font-face {
-  font-family: 'Abduction';
-  src: url('/fonts/abduction2002.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @font-face {
   font-family: 'Space Grotesk';
   src: url('/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
