@@ -31,7 +31,9 @@ export default function FAQ() {
                         FAQ
                     </span>
                 </div>
-                {/* <SidebarMenu /> */}
+                <div className="absolute top-[30%] left-[6%] pointer-events-auto w-[35%]">
+                    <SidebarMenu />
+                </div>
             </div>
         </div>
     )
