@@ -1,19 +1,17 @@
-import headerImage from '../assets/images/aboutHeader.svg';
+import { Link } from 'react-router-dom';
+import "../globals.css"
+import header from "../assets/images/faqHeader.svg";
 import codebrewLogo from '../assets/icons/codebrewLogo.svg';
-import '../globals.css';
 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-
-export default function Header() {
+export default function FAQ() {
     return (
-
         <div className="top-0 right-0 w-full flex justify-end pointer-events-none z-20 position-absolute">
             <div
 
                 className="z-0 relative pointer-events-auto"
             >
                 <img
-                    src={headerImage}
+                    src={header}
                     alt=""
                     className="w-full h-auto block mt-[-8vh] object-cover"
                 />
@@ -27,16 +25,14 @@ export default function Header() {
                     </div>
                 </Link>
 
-                <div className="absolute top-[20%] left-[4%] flex flex-col gap-[0.8vw] max-w-[100%]">
-                    <span className="font-guardian-angle text-white leading-none" style={{ fontSize: 'min(5vh,3vw' }}>
-                        ABOUT
-                    </span>
-                    <span className="font-guardian-angle text-[#C6FF00] leading-none" style={{ fontSize: 'min(5vh, 3vw)' }}>
-                        CODEBREW
+            <div className="absolute top-[15%] left-[6%] flex flex-col gap-[0.8vw] max-w-[100%]">
+                    <span className="font-guardian-angle text-[#C6FF00] leading-none" style={{ fontSize: 'min(12vh, 9vw)' }}>
+                        FAQ
                     </span>
                 </div>
+
+
             </div>
         </div>
-    );
+    )
 }
-

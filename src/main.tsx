@@ -5,6 +5,7 @@ import './globals.css';
 
 import Home from './app';
 import About from './about/about';
+import FAQ from './faq/faq';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -12,6 +13,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

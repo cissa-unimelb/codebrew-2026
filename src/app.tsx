@@ -16,6 +16,13 @@ export default function Home() {
                     <span className="relative z-10">ABOUT</span>
                     <div className="absolute inset-0 bg-primary blur-md opacity-0 group-hover:opacity-50 transition-opacity" />
                 </Link>
+                <Link
+                    to="/faq"
+                    className="group relative px-8 py-4 bg-primary text-black font-bold uppercase tracking-widest transition-all hover:bg-white font-space-grotesk text-lg"
+                >
+                    <span className="relative z-10">FAQ</span>
+                    <div className="absolute inset-0 bg-primary blur-md opacity-0 group-hover:opacity-50 transition-opacity" />
+                </Link>
             </main>
         </div>
     );
