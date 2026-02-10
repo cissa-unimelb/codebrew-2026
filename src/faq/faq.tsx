@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import "../globals.css"
 import header from "../assets/images/faqHeader.svg";
 import codebrewLogo from '../assets/icons/codebrewLogo.svg';
+import SidebarMenu from './sidebarMenu';
 
 export default function FAQ() {
     return (
@@ -25,13 +26,12 @@ export default function FAQ() {
                     </div>
                 </Link>
 
-            <div className="absolute top-[15%] left-[6%] flex flex-col gap-[0.8vw] max-w-[100%]">
+                <div className="absolute top-[15%] left-[6%] flex flex-col gap-[0.8vw] max-w-[100%]">
                     <span className="font-guardian-angle text-[#C6FF00] leading-none" style={{ fontSize: 'min(12vh, 9vw)' }}>
                         FAQ
                     </span>
                 </div>
-
-
+                {/* <SidebarMenu /> */}
             </div>
         </div>
     )
