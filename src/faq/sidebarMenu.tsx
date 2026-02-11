@@ -8,9 +8,12 @@ import locationIconBlack from '../assets/icons/locationBW.svg';
 import peopleIconBlack from '../assets/icons/peopleBW.svg';
 import resourcesIconBlack from '../assets/icons/resourceBW.svg';
 
-const SidebarMenu = () => {
-    const [activeTab, setActiveTab] = useState('location');
+interface SidebarProps {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+}
 
+const SidebarMenu: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
     const tabs = [
         { 
             id: 'location', 
@@ -65,7 +68,6 @@ const SidebarMenu = () => {
                             {tab.label}
                             
 
-                            {/* animated underline */}
                             
                         </span>
                         
