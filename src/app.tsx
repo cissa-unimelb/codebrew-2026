@@ -1,29 +1,81 @@
+import backgroundImage from './assets/images/LandingPageBackground.svg';
+import codebrewLogo from './assets/icons/codebrewLogo.svg';
+import cissaLogo from './assets/icons/cissalogo.svg';
+
 import { Link } from 'react-router-dom';
 
+const LandingPage = () => {
+    const menuItems = [
+        { label: 'FAQ', path: '/faq', active: true },
+        { label: 'About', path: '/about', active: true },
+        { label: 'Placeholder', path: '#', active: false },
+        { label: 'Placeholder', path: '#', active: false },
+        { label: 'Placeholder', path: '#', active: false },
+    ];
 
-export default function Home() {
+    const radius = 280;
+
     return (
-        <div className="flex flex-col min-h-screen">
-            <main className="flex-grow flex flex-col items-center justify-center bg-black text-white px-4">
-                <h1 className="font-megatrans text-6xl md:text-8xl mb-6 tracking-tighter">
-                    CODEBREW
-                </h1>
+        <div
+            className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black font-mono"
+            style={{
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}
+        >
+            <Link to="/" className="no-underline text-inherit">
+                <div className="absolute top-[3%] left-[3%] flex items-center gap-[1vw] z-50">
+                    <span className="font-guardian-angle text-white text-[min(5vh,3vw)] leading-none">
+                        CODEBREW
+                    </span>
+                    <img src={codebrewLogo} alt="Codebrew logo" className="w-[2vw] max-w-[100px] h-auto" />
+                </div>
+            </Link>
 
-                <Link
-                    to="/about"
-                    className="group relative px-8 py-4 bg-primary text-black font-bold uppercase tracking-widest transition-all hover:bg-white font-space-grotesk text-lg"
-                >
-                    <span className="relative z-10">ABOUT</span>
-                    <div className="absolute inset-0 bg-primary blur-md opacity-0 group-hover:opacity-50 transition-opacity" />
-                </Link>
-                <Link
-                    to="/faq"
-                    className="group relative px-8 py-4 bg-primary text-black font-bold uppercase tracking-widest transition-all hover:bg-white font-space-grotesk text-lg"
-                >
-                    <span className="relative z-10">FAQ</span>
-                    <div className="absolute inset-0 bg-primary blur-md opacity-0 group-hover:opacity-50 transition-opacity" />
-                </Link>
-            </main>
+            <div className="relative z-30 flex items-center justify-center">
+                <div className="w-24 h-24 rounded-full flex items-center justify-center ">
+                    <img src={codebrewLogo} alt="Codebrew logo" className="w-[4vw] max-w-[10vw] h-auto" />
+                </div>
+            </div>
+
+            <div className="absolute bottom-[5%] right-[2%] z-30 flex items-center justify-center">
+                <div className="rounded-full flex items-center justify-center ">
+                    <img src={cissaLogo} alt="Cissa logo" className="h-auto" />
+                </div>
+            </div>
+
+            {/* ORBITAL MENU ITEMS */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                {menuItems.map((item, index) => {
+                    const angle = (index / menuItems.length) * 2 * Math.PI - Math.PI / 3;
+                    const x = Math.cos(angle) * radius;
+                    const y = Math.sin(angle) * radius;
+
+                    return (
+                        <div
+                            key={index}
+                            className="absolute pointer-events-auto p-4"
+                            style={{
+                                transform: `translate(${x}px, ${y}px) rotate(${angle}rad)`,
+                            }}
+                        >
+                            <Link
+                                to={item.active ? item.path : "#"}
+                                className={`font-megatrans transition-all duration-300 uppercase text-sm tracking-widest inline-block transform-gpu
+                                        ${item.active
+                                        ? 'text-[#C6FF00] cursor-pointer hover:brightness-125 hover:scale-110 [text-shadow:0_0_12px_rgba(198,255,0,0.8)]'
+                                        : 'text-white/30 cursor-not-allowed pointer-events-none'
+                                    }`}
+                            >
+                                {item.label}
+                            </Link>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
-}
+};
+
+export default LandingPage;
