@@ -8,6 +8,7 @@ const LandingPage = () => {
     const menuItems = [
         { label: 'FAQ', path: '/faq', active: true },
         { label: 'About', path: '/about', active: true },
+        { label: 'Timeline', path: '/timeline', active: true },
         { label: 'Placeholder', path: '#', active: false },
         { label: 'Placeholder', path: '#', active: false },
         { label: 'Placeholder', path: '#', active: false },
