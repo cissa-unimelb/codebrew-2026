@@ -1,0 +1,58 @@
+{ 
+    "thursday": [
+  {
+    "startTime": "12:30",
+    "endTime": "13:30",
+    "name": "Opening Ceremony",
+    "location": "Copland Theatre",
+    "colour": "green",
+    "icon": "rocket",
+    "type": "open"
+  },
+  {
+    "startTime": "13:30",
+    "endTime": "15:00",
+    "name": "Coding Starts !",
+    "location": "Building 168",
+    "colour": "blue",
+    "icon": "computer",
+    "type": "session"
+  },
+  {
+    "startTime": "16:30",
+    "endTime": "18:00",
+    "name": "Dinner",
+    "location": "The Spot",
+    "colour": "purple",
+    "icon": "tree",
+    "type": "challenge"
+  },
+  {
+    "startTime": "16:30",
+    "endTime": "18:00",
+    "name": "Coding Starts !",
+    "location": "Building 168",
+    "colour": "red",
+    "icon": "star",
+    "type": "break"
+  },
+  {
+    "startTime": "16:30",
+    "endTime": "18:00",
+    "name": "Coding Starts !",
+    "location": "Building 168",
+    "colour": "red",
+    "icon": "star",
+    "type": "break"
+  },
+  {
+    "startTime": "16:30",
+    "endTime": "18:00",
+    "name": "Coding Starts !",
+    "location": "Building 168",
+    "colour": "red",
+    "icon": "star",
+    "type": "break"
+  }
+]
+}

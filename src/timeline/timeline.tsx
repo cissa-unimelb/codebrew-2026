@@ -5,7 +5,14 @@ import backgroundImage from '../assets/images/timelineBackground.svg';
 
 import { Link } from 'react-router-dom';  
 
+
+import ScheduleCard, { EventItem } from './scheduleCard';
+
+import ThursdayEvents from './thursdayEvents.json';
+
 export default function Timeline() {
+
+const thursdayEvents: EventItem[] = ThursdayEvents.thursday;  
     return (
         <div className="w-full h-screen flex items-center justify-center"
         style={{
@@ -36,6 +43,16 @@ export default function Timeline() {
                 <span className="w-[0.5vw] h-[0.5vw] bg-[#D0F953] rounded-full"></span>
                 <span>ACTIVE</span>
               </div>
+            </div>
+
+            {/* Replace your ScheduleCard container with this */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex justify-center px-10">
+              <ScheduleCard 
+                dayNumber="24"
+                dayName="THURSDAY"
+                date="JAN 24, 2026"
+                events={thursdayEvents}
+              />
             </div>
 
             <span className="absolute bottom-[5%] left-1/2 transform -translate-x-1/2 font-megatrans text-[#C6FF00] text-[min(2vh,1vw)] leading-none 
