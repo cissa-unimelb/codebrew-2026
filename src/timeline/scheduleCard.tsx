@@ -130,17 +130,17 @@ export default function ScheduleCard({
   };
 
   return (
-    <div className="w-[85vw] max-w-6xl bg-black border border-transparent shadow-2xl overflow-hidden">
+    <div className="w-[85vw] max-w-6xl bg-[#0c0d0c] border border-transparent shadow-2xl overflow-hidden rounded-[20px]">
       <div className="flex justify-between items-center p-6 ">
         <div className="flex flex-col">
           <div className="flex items-baseline gap-[0.2VW] text-[#E5E7E8] font-guardian-angle">
-            <span className="text-[60px]  italic text-[#E5E7E8]/60">
+            <span className="text-[60px]  italic text-[#E5E7E8]/60 px-[20px]">
               {dayNumber}
             </span>
             <span className="text-[60px] text-[#E5E7E8]/60">&nbsp;|&nbsp;</span>
             <span className="text-[60px] italic uppercase">{dayName}</span>
           </div>
-          <span className="text-zinc-500 text-xs font-mono tracking-[0.2em] uppercase mt-1 font-space-grotesk">
+          <span className="text-zinc-500 text-xs font-mono tracking-[0.2em] uppercase mt-1 font-space-grotesk px-[20px]">
             {date}
           </span>
         </div>
