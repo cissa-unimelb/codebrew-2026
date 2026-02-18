@@ -20,6 +20,9 @@ export default function Timeline() {
     { dayNumber: "24", dayName: "THURSDAY", date: "JAN 24, 2026" },
     { dayNumber: "25", dayName: "FRIDAY", date: "JAN 25, 2026" },
     { dayNumber: "26", dayName: "SATURDAY", date: "JAN 26, 2026" },
+    { dayNumber: "26", dayName: "SATURDAY", date: "JAN 26, 2026" },
+    { dayNumber: "26", dayName: "SATURDAY", date: "JAN 26, 2026" },
+    { dayNumber: "26", dayName: "SATURDAY", date: "JAN 26, 2026" },
   ];
 
   useEffect(() => {
@@ -117,7 +120,7 @@ export default function Timeline() {
 
           const dynamicClasses = isActive
             ? "scale-[1.1] blur-0 opacity-100 z-20"
-            : `scale-[0.75] blur-md opacity-30 ${
+            : `scale-[0.75] blur-[7px] opacity-30 ${
                 offset < 0 ? "-translate-y-10" : "translate-y-10"
               }`;
 
