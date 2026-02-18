@@ -17,12 +17,42 @@ export default function Timeline() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const days = [
-    { dayNumber: "24", dayName: "THURSDAY", date: "JAN 24, 2026" },
-    { dayNumber: "25", dayName: "FRIDAY", date: "JAN 25, 2026" },
-    { dayNumber: "26", dayName: "SATURDAY", date: "JAN 26, 2026" },
-    { dayNumber: "26", dayName: "SATURDAY", date: "JAN 26, 2026" },
-    { dayNumber: "26", dayName: "SATURDAY", date: "JAN 26, 2026" },
-    { dayNumber: "26", dayName: "SATURDAY", date: "JAN 26, 2026" },
+    {
+      dayNumber: "24",
+      dayName: "THURSDAY",
+      date: "JAN 24, 2026",
+      status: "INACTIVE",
+    },
+    {
+      dayNumber: "25",
+      dayName: "FRIDAY",
+      date: "JAN 25, 2026",
+      status: "INACTIVE",
+    },
+    {
+      dayNumber: "26",
+      dayName: "SATURDAY",
+      date: "JAN 26, 2026",
+      status: "ACTIVE",
+    },
+    {
+      dayNumber: "26",
+      dayName: "SATURDAY",
+      date: "JAN 26, 2026",
+      status: "INACTIVE",
+    },
+    {
+      dayNumber: "26",
+      dayName: "SATURDAY",
+      date: "JAN 26, 2026",
+      status: "INACTIVE",
+    },
+    {
+      dayNumber: "26",
+      dayName: "SATURDAY",
+      date: "JAN 26, 2026",
+      status: "INACTIVE",
+    },
   ];
 
   useEffect(() => {
@@ -93,7 +123,7 @@ export default function Timeline() {
           |&nbsp;&nbsp;&nbsp;TIMELINE&nbsp;&nbsp;&nbsp;|
         </span>
 
-        <div className="absolute top-[3%] right-[5%] w-[12%] h-[5%] bg-[#111111] border-2 border-[#BEC2F1] flex items-center justify-center font-space-grotesk gap-[2vw]">
+        <div className="absolute top-[3%] right-[5%] w-[12%] h-[30%] bg-[#111111] border-2 border-[#505451] flex items-center justify-center font-space-grotesk gap-[2vw]">
           <div className="flex items-center gap-[0.2vw]">
             <span className="w-[0.5vw] h-[0.5vw] bg-[#4D5564] rounded-full"></span>
             <span>INACTIVE</span>
@@ -134,6 +164,7 @@ export default function Timeline() {
                 dayName={day.dayName}
                 date={day.date}
                 events={thursdayEvents}
+                status={day.status}
               />
             </div>
           );

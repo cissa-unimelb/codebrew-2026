@@ -129,12 +129,18 @@ export default function ScheduleCard({
     }
   };
 
+  const isActive = status === "ACTIVE";
+
   return (
-    <div className="w-[85vw] max-w-6xl bg-[#0c0d0c] border border-transparent shadow-2xl overflow-hidden rounded-[20px]">
-      <div className="flex justify-between items-center p-6 ">
+    <div
+      className={`relative w-[85vw] max-w-6xl border border-transparent shadow-2xl overflow-hidden rounded-[20px] ${"bg-[#0c0d0c]"}`}
+    >
+      <div className="flex items-start p-6 gap-4">
         <div className="flex flex-col">
           <div className="flex items-baseline gap-[0.2VW] text-[#E5E7E8] font-guardian-angle">
-            <span className="text-[60px]  italic text-[#E5E7E8]/60 px-[20px]">
+            <span
+              className={`text-[60px]  italic ${isActive ? "text-[#C6FF00]" : "text-[#E5E7E8]/60"} px-[20px]`}
+            >
               {dayNumber}
             </span>
             <span className="text-[60px] text-[#E5E7E8]/60">&nbsp;|&nbsp;</span>
@@ -145,9 +151,31 @@ export default function ScheduleCard({
           </span>
         </div>
 
-        <div className="hidden md:flex gap-3">
-          <div className="px-3 py-1.5 bg-zinc-900 border border-zinc-800 text-zinc-400 text-[10px] font-mono font-bold rounded-sm">
-            {events.length} EVENTS
+        <div className="ml-auto px-[20px] py-[20px]">
+          <div className="flex items-center gap-4 px-[14px] py-[10px] bg-black/70 backdrop-blur-md border border-zinc-800 rounded-md text-[22px] font-space-grotesk uppercase tracking-widest shadow-lg">
+            {/* DOT */}
+            <span
+              className={`w-[15px] h-[15px] rounded-full ${
+                isActive
+                  ? "bg-[#D2FB53] shadow-[0_0_14px_#D2FB53] pulse-element"
+                  : "bg-[#4D5564]"
+              }`}
+              style={{ display: "inline-block" }}
+            />
+            <div className="w-[10px] h-5 bg-zinc-700" />
+            {/* STATUS */}
+            <div className="flex items-center gap-3">
+              {/* Text */}
+              <span className={isActive ? "text-[#D2FB53]" : "text-zinc-400"}>
+                {isActive ? "Active" : "Inactive"}
+              </span>
+            </div>
+
+            {/* Divider */}
+            <div className="w-[10px] h-5 bg-zinc-700" />
+
+            {/* Counter */}
+            <span className="text-zinc-400">{events.length} Events</span>
           </div>
         </div>
       </div>
@@ -155,7 +183,7 @@ export default function ScheduleCard({
       <div
         ref={scrollRef}
         onWheel={handleWheel}
-        className="bg-[#A4A4A4] px-6 py-8 overflow-x-auto scrollbar-custom cursor-pointer"
+        className={`${isActive ? "bg-gradient-to-b from-[#7D9531] to-[#D2FB53]" : "bg-[#A4A4A4]"} px-6 py-8 overflow-x-auto scrollbar-custom cursor-pointer`}
       >
         <div className="flex items-start gap-8 w-max p-[20px]">
           {events.map((event, index) => (
