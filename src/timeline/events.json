@@ -1,0 +1,330 @@
+{ 
+    "thursday": {
+      "dayNumber" : "24",
+      "dayName" : "Thursday",
+      "date": "2026-02-25",
+      "status": "INACTIVE",
+      "events": [
+        {
+          "startTime": "12:30",
+          "endTime": "13:30",
+          "name": "Opening Ceremony",
+          "location": "Copland Theatre",
+          "colour": "green",
+          "icon": "rocket",
+          "type": "open"
+        },
+        {
+          "startTime": "13:30",
+          "endTime": "15:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "blue",
+          "icon": "computer",
+          "type": "session"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Dinner",
+          "location": "The Spot",
+          "colour": "purple",
+          "icon": "tree",
+          "type": "challenge"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        }
+      ]
+
+    },
+
+    "Friday": {
+      "dayNumber" : "24",
+      "dayName" : "Friday",
+      "date": "2026-02-26",
+      "status": "INACTIVE",
+      "events": [
+        {
+          "startTime": "12:30",
+          "endTime": "13:30",
+          "name": "Opening Ceremony",
+          "location": "Copland Theatre",
+          "colour": "green",
+          "icon": "rocket",
+          "type": "open"
+        },
+        {
+          "startTime": "13:30",
+          "endTime": "15:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "blue",
+          "icon": "computer",
+          "type": "session"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Dinner",
+          "location": "The Spot",
+          "colour": "purple",
+          "icon": "tree",
+          "type": "challenge"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        }
+      ]
+
+    },
+
+    "saturday": {
+      "dayNumber" : "24",
+      "dayName" : "Saturday",
+      "date": "2026-02-27",
+      "status": "INACTIVE",
+      "events": [
+        {
+          "startTime": "12:30",
+          "endTime": "13:30",
+          "name": "Opening Ceremony",
+          "location": "Copland Theatre",
+          "colour": "green",
+          "icon": "rocket",
+          "type": "open"
+        },
+        {
+          "startTime": "13:30",
+          "endTime": "15:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "blue",
+          "icon": "computer",
+          "type": "session"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Dinner",
+          "location": "The Spot",
+          "colour": "purple",
+          "icon": "tree",
+          "type": "challenge"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        }
+      ]
+
+    },
+
+    "sunday": {
+      "dayNumber" : "24",
+      "dayName" : "Sunday",
+      "date": "2026-02-28",
+      "status": "INACTIVE",
+      "events": [
+        {
+          "startTime": "12:30",
+          "endTime": "13:30",
+          "name": "Opening Ceremony",
+          "location": "Copland Theatre",
+          "colour": "green",
+          "icon": "rocket",
+          "type": "open"
+        },
+        {
+          "startTime": "13:30",
+          "endTime": "15:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "blue",
+          "icon": "computer",
+          "type": "session"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Dinner",
+          "location": "The Spot",
+          "colour": "purple",
+          "icon": "tree",
+          "type": "challenge"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        }
+      ]
+
+    },
+    "Monday": {
+      "dayNumber" : "24",
+      "dayName" : "Monday",
+      "date": "2026-02-29",
+      "status": "INACTIVE",
+      "events": [
+        {
+          "startTime": "12:30",
+          "endTime": "13:30",
+          "name": "Opening Ceremony",
+          "location": "Copland Theatre",
+          "colour": "green",
+          "icon": "rocket",
+          "type": "open"
+        },
+        {
+          "startTime": "13:30",
+          "endTime": "15:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "blue",
+          "icon": "computer",
+          "type": "session"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Dinner",
+          "location": "The Spot",
+          "colour": "purple",
+          "icon": "tree",
+          "type": "challenge"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        },
+        {
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "name": "Coding Starts !",
+          "location": "Building 168",
+          "colour": "red",
+          "icon": "star",
+          "type": "break"
+        }
+      ]
+
+    }
+ 
+}

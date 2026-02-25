@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import "../globals.css";
 
+type Status = "ACTIVE" | "INACTIVE";
+
 export interface EventItem {
   startTime: string;
   endTime: string;
@@ -21,11 +23,19 @@ export interface EventItem {
   type: string;
 }
 
+export interface DayItem {
+  dayNumber: string;
+  dayName: string;
+  date: string;
+  status: "ACTIVE" | "INACTIVE";
+  events: EventItem[];
+}
+
 interface ScheduleCardProps {
   dayNumber?: string;
   dayName?: string;
   date?: string;
-  status?: "ACTIVE" | "INACTIVE";
+  status?: Status;
   events: EventItem[];
 }
 
@@ -122,14 +132,13 @@ export default function ScheduleCard({
   events = [],
 }: ScheduleCardProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const today = new Date().toISOString().split("T")[0];
 
   const handleWheel = (e: React.WheelEvent) => {
     if (scrollRef.current) {
       scrollRef.current.scrollLeft += e.deltaY;
     }
   };
-
-  const isActive = status === "ACTIVE";
 
   return (
     <div
@@ -139,7 +148,7 @@ export default function ScheduleCard({
         <div className="flex flex-col">
           <div className="flex items-baseline gap-[0.2VW] text-[#E5E7E8] font-guardian-angle">
             <span
-              className={`text-[60px]  italic ${isActive ? "text-[#C6FF00]" : "text-[#E5E7E8]/60"} px-[20px]`}
+              className={`text-[60px]  italic ${date === today ? "text-[#C6FF00]" : "text-[#E5E7E8]/60"} px-[20px]`}
             >
               {dayNumber}
             </span>
@@ -156,7 +165,7 @@ export default function ScheduleCard({
             {/* DOT */}
             <span
               className={`w-[15px] h-[15px] rounded-full ${
-                isActive
+                date === today
                   ? "bg-[#D2FB53] shadow-[0_0_14px_#D2FB53] pulse-element"
                   : "bg-[#4D5564]"
               }`}
@@ -166,8 +175,10 @@ export default function ScheduleCard({
             {/* STATUS */}
             <div className="flex items-center gap-3">
               {/* Text */}
-              <span className={isActive ? "text-[#D2FB53]" : "text-zinc-400"}>
-                {isActive ? "Active" : "Inactive"}
+              <span
+                className={date === today ? "text-[#D2FB53]" : "text-zinc-400"}
+              >
+                {date === today ? "Active" : "Inactive"}
               </span>
             </div>
 
@@ -183,7 +194,7 @@ export default function ScheduleCard({
       <div
         ref={scrollRef}
         onWheel={handleWheel}
-        className={`${isActive ? "bg-gradient-to-b from-[#7D9531] to-[#D2FB53]" : "bg-[#A4A4A4]"} px-6 py-8 overflow-x-auto scrollbar-custom cursor-pointer`}
+        className={`${date === today ? "bg-gradient-to-b from-[#7D9531] to-[#D2FB53]" : "bg-[#A4A4A4]"} px-6 py-8 overflow-x-auto scrollbar-custom cursor-pointer`}
       >
         <div className="flex items-start gap-8 w-max p-[20px]">
           {events.map((event, index) => (

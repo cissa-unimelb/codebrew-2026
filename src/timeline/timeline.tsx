@@ -5,55 +5,16 @@ import backgroundImage from "../assets/images/timelineBackground.svg";
 
 import { Link } from "react-router-dom";
 
-import ScheduleCard, { EventItem } from "./scheduleCard";
+import ScheduleCard, { EventItem, DayItem } from "./scheduleCard";
 
-import ThursdayEvents from "./thursdayEvents.json";
+import Events from "./events.json";
 import { useEffect, useRef, useState } from "react";
 
-export default function Timeline() {
-  const thursdayEvents: EventItem[] = ThursdayEvents.thursday;
+import { Radio } from "lucide-react";
 
+export default function Timeline() {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  const days = [
-    {
-      dayNumber: "24",
-      dayName: "THURSDAY",
-      date: "JAN 24, 2026",
-      status: "INACTIVE",
-    },
-    {
-      dayNumber: "25",
-      dayName: "FRIDAY",
-      date: "JAN 25, 2026",
-      status: "INACTIVE",
-    },
-    {
-      dayNumber: "26",
-      dayName: "SATURDAY",
-      date: "JAN 26, 2026",
-      status: "ACTIVE",
-    },
-    {
-      dayNumber: "26",
-      dayName: "SATURDAY",
-      date: "JAN 26, 2026",
-      status: "INACTIVE",
-    },
-    {
-      dayNumber: "26",
-      dayName: "SATURDAY",
-      date: "JAN 26, 2026",
-      status: "INACTIVE",
-    },
-    {
-      dayNumber: "26",
-      dayName: "SATURDAY",
-      date: "JAN 26, 2026",
-      status: "INACTIVE",
-    },
-  ];
 
   useEffect(() => {
     const container = containerRef.current;
@@ -119,9 +80,20 @@ export default function Timeline() {
             />
           </div>
         </Link>
-        <span className="absolute top-[3%] left-1/2 transform -translate-x-1/2 font-guardian-angle text-textBright text-[min(10vh,9vw)] leading-none">
-          |&nbsp;&nbsp;&nbsp;TIMELINE&nbsp;&nbsp;&nbsp;|
-        </span>
+        <div className="absolute top-[3%] left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+          <span className="font-guardian-angle text-textBright text-[min(10vh,9vw)] leading-none">
+            |&nbsp;&nbsp;&nbsp;TIMELINE&nbsp;&nbsp;&nbsp;|
+          </span>
+          <span className="mt-[0.5vh] font-space-grotesk text-white text-[min(2.6vh,2.2vw)] tracking-[0.2em] flex items-center gap-[0.6vw]">
+            <Radio className="w-[1.2em] h-[1.2em] text-textBright" />
+            LIVE TRACKING | {Object.values(Events).length} DAYS |{" "}
+            {Object.values(Events).reduce(
+              (total, day) => total + day.events.length,
+              0,
+            )}{" "}
+            EVENTS
+          </span>
+        </div>
 
         <div className="absolute top-[3%] right-[5%] w-[12%] h-[30%] bg-[#111111] border-2 border-[#505451] flex items-center justify-center font-space-grotesk gap-[2vw]">
           <div className="flex items-center gap-[0.2vw]">
@@ -142,11 +114,9 @@ export default function Timeline() {
            before:content-[''] before:block before:h-[22vh] before:shrink-0
            after:content-[''] after:block after:h-[22vh] after:shrink-0"
       >
-        {days.map((day, index) => {
+        {Object.values(Events).map((day, index) => {
           const offset = index - activeIndex;
-
           const isActive = offset === 0;
-          const translateY = offset * 10; // gives -10, 0, 10
 
           const dynamicClasses = isActive
             ? "scale-[1.1] blur-0 opacity-100 z-20"
@@ -163,8 +133,7 @@ export default function Timeline() {
                 dayNumber={day.dayNumber}
                 dayName={day.dayName}
                 date={day.date}
-                events={thursdayEvents}
-                status={day.status}
+                events={day.events}
               />
             </div>
           );
