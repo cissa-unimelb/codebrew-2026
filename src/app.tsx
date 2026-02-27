@@ -1,6 +1,8 @@
 import backgroundImage from './assets/images/LandingPageBackground.svg';
 import codebrewLogo from './assets/icons/codebrewLogo.svg';
 import cissaLogo from './assets/icons/cissalogo.svg';
+import { motion } from 'framer-motion';
+import { easeOut } from 'framer-motion';
 
 import { Link } from 'react-router-dom';
 
@@ -14,6 +16,12 @@ const LandingPage = () => {
         { label: 'Placeholder', path: '#', active: false },
     ];
 
+    const fadeInUp = {
+        initial: { y: 60, opacity: 0 },
+        animate: { y: 0, opacity: 1 },
+        transition: { duration: 0.6, ease: easeOut }
+    };
+
     const radius = 280;
 
     return (
@@ -25,14 +33,12 @@ const LandingPage = () => {
                 backgroundPosition: 'center',
             }}
         >
-            <Link to="/" className="no-underline text-inherit">
-                <div className="absolute top-[3%] left-[3%] flex items-center gap-[1vw] z-50">
-                    <span className="font-guardian-angle text-white text-[min(5vh,3vw)] leading-none">
-                        CODEBREW
-                    </span>
-                    <img src={codebrewLogo} alt="Codebrew logo" className="w-[2vw] max-w-[100px] h-auto" />
-                </div>
-            </Link>
+            <motion.div {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.4 }} className="absolute top-[3%] left-[3%] flex items-center gap-[2vw]">
+                <Link to="/" className="flex items-center gap-[2vw] no-underline text-inherit">
+                    <span className="font-guardian-angle text-white text-[min(5vh,3vw)] leading-none">CODEBREW</span>
+                    <img src={codebrewLogo} alt="Logo" className="w-[4vw] max-w-[100px]" />
+                </Link>
+            </motion.div>
 
             <div className="relative z-30 flex items-center justify-center">
                 <div className="w-24 h-24 rounded-full flex items-center justify-center ">
