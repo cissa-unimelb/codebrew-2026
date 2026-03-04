@@ -52,3 +52,33 @@ body {
 #root {
   height: 100%;
 }
+
+@keyframes pulse-green-to-grey {
+  0% {
+    background-color: #D2FB53;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 128, 0, 0.7);
+  }
+  50% {
+    background-color: #4D5564;
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(128, 128, 128, 0);
+  }
+  100% {
+    background-color: #D2FB53;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 128, 0, 0);
+  }
+}
+
+.pulse-element {
+  animation: pulse-green-to-grey 2s infinite;
+}
+
+/* Hide scrollbars while preserving scroll behavior */
+.scrollbar-invisible {
+  scrollbar-width: none;
+}
+.scrollbar-invisible::-webkit-scrollbar {
+  display: none;
+}
