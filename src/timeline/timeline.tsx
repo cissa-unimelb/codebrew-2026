@@ -10,11 +10,13 @@ import ScheduleCard, { EventItem, DayItem } from "./scheduleCard";
 import Events from "./events.json";
 import { useEffect, useRef, useState } from "react";
 
-import { Radio } from "lucide-react";
+import { ArrowUp, Radio } from "lucide-react";
 
 export default function Timeline() {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const days = Object.values(Events);
+  const totalDays = days.length;
 
   useEffect(() => {
     const container = containerRef.current;
@@ -60,7 +62,7 @@ export default function Timeline() {
 
   return (
     <div
-      className="w-full h-screen flex flex-col"
+      className="relative w-full h-screen flex flex-col"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -86,12 +88,8 @@ export default function Timeline() {
           </span>
           <span className="mt-[0.5vh] font-space-grotesk text-white text-[min(2.6vh,2.2vw)] tracking-[0.2em] flex items-center gap-[0.6vw]">
             <Radio className="w-[1.2em] h-[1.2em] text-textBright" />
-            LIVE TRACKING | {Object.values(Events).length} DAYS |{" "}
-            {Object.values(Events).reduce(
-              (total, day) => total + day.events.length,
-              0,
-            )}{" "}
-            EVENTS
+            LIVE TRACKING | {totalDays} DAYS |{" "}
+            {days.reduce((total, day) => total + day.events.length, 0)} EVENTS
           </span>
         </div>
 
@@ -107,14 +105,14 @@ export default function Timeline() {
         </div>
       </div>
 
-      {/* Replace your ScheduleCard container with this */}
+      {/* Scroll container with all the days in the timeline */}
       <div
         ref={containerRef}
-        className="flex-1 overflow-y-scroll snap-y snap-mandatory flex flex-col items-center
+        className="flex-1 overflow-y-scroll scrollbar-invisible snap-y snap-mandatory flex flex-col items-center
            before:content-[''] before:block before:h-[22vh] before:shrink-0
            after:content-[''] after:block after:h-[22vh] after:shrink-0"
       >
-        {Object.values(Events).map((day, index) => {
+        {days.map((day, index) => {
           const offset = index - activeIndex;
           const isActive = offset === 0;
 
@@ -139,6 +137,24 @@ export default function Timeline() {
           );
         })}
       </div>
+
+      {/*Up arrow icon that appears when the user reaches the last day of the schedule only*/}
+      {activeIndex === totalDays - 1 && (
+        <button
+          type="button"
+          aria-label="Back to first day"
+          onClick={() =>
+            containerRef.current?.scrollTo({ top: 0, behavior: "smooth" })
+          }
+          className="absolute bottom-[10vh] left-1/2 -translate-x-1/2 z-30 flex items-center justify-center
+            w-[4vh] h-[4vh] rounded-full border-2 border-textBright text-textBright
+            bg-primary/80 hover:bg-[#1A1C22] hover:text-white
+            active:bg-textBright active:text-text-primary active:border-textBright active:scale-95
+            transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C6FF00]/70"
+        >
+          <ArrowUp className="w-[2.2vh] h-[2.2vh]" />
+        </button>
+      )}
 
       <div className="h-[8vh] flex items-center justify-center">
         <span

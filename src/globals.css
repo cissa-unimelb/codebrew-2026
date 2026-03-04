@@ -74,3 +74,11 @@ body {
 .pulse-element {
   animation: pulse-green-to-grey 2s infinite;
 }
+
+/* Hide scrollbars while preserving scroll behavior */
+.scrollbar-invisible {
+  scrollbar-width: none;
+}
+.scrollbar-invisible::-webkit-scrollbar {
+  display: none;
+}
