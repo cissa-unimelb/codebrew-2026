@@ -138,7 +138,7 @@ export default function Timeline() {
         })}
       </div>
 
-      {/*Up arrow icon that appears when the user reaches the last day of the schedule only*/}
+      {/* Up arrow icon that appears when the user reaches the last day of the schedule only */}
       {activeIndex === totalDays - 1 && (
         <button
           type="button"
@@ -150,15 +150,16 @@ export default function Timeline() {
             w-[4vh] h-[4vh] rounded-full border-2 border-textBright text-textBright
             bg-primary/80 hover:bg-[#1A1C22] hover:text-white
             active:bg-textBright active:text-text-primary active:border-textBright active:scale-95
-            transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C6FF00]/70"
+            transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-textBright/70"
         >
           <ArrowUp className="w-[2.2vh] h-[2.2vh]" />
         </button>
       )}
 
+      {/* Scroll instructions for user */}
       <div className="h-[8vh] flex items-center justify-center">
         <span
-          className="absolute bottom-[5%] left-1/2 transform -translate-x-1/2 font-megatrans text-[#C6FF00] text-[min(2vh,1vw)] leading-none 
+          className="absolute bottom-[5%] left-1/2 transform -translate-x-1/2 font-megatrans text-textBright text-[min(2vh,1vw)] leading-none 
               text-shadow-[0_0_20px_rgba(198,255,0,0.8)]"
         >
           Scroll to navigate timeline

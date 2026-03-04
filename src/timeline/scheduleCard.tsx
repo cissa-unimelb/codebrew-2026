@@ -94,7 +94,7 @@ const EventCard = ({ event }: { event: EventItem }) => {
         </div>
 
         <span
-          className="text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5 border rounded-[2px] font-space-grotesk"
+          className="text-[13px] font-bold uppercase tracking-widest px-1.5 py-0.5 border rounded-[2px] font-space-grotesk"
           style={{ borderColor: `${hexColor}40`, color: hexColor }}
         >
           {event.type}
