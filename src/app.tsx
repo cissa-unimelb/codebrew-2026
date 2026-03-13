@@ -12,34 +12,38 @@ import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const menuItems = [
-    { type: "text", label: "Placeholder", path: "#", active: false },
-    { type: "text", label: "FAQ", path: "/faq", active: true },
+    { type: "text", label: ".", path: "#", active: false },
     { type: "text", label: "About", path: "/about", active: true },
-    {
-      type: "imageLink",
-      imgSrc: stemLogo,
-      label: "Track 2",
-      path: "/",
-      active: true,
-    },
-    { type: "text", label: "Timeline", path: "/timeline", active: true },
-    { type: "text", label: "Placeholder", path: "#", active: false },
-    { type: "text", label: "Placeholder", path: "#", active: false },
+
+    { type: "text", label: ".", path: "#", active: false },
     {
       type: "imageLink",
       imgSrc: artsLogo,
-      label: "Track 3",
-      path: "/",
+      label: "Track 2",
+      labelPosition: "right",
+      path: "/trackTwo",
       active: true,
     },
-    { type: "text", label: "Placeholder", path: "#", active: false },
-    { type: "text", label: "Placeholder", path: "#", active: false },
-    { type: "text", label: "Placeholder", path: "#", active: false },
+    { type: "text", label: ".", path: "#", active: false },
+    { type: "text", label: "Timeline", path: "/timeline", active: true },
+    { type: "text", label: ".", path: "#", active: false },
+    {
+      type: "imageLink",
+      imgSrc: stemLogo,
+      label: "Track 3",
+      labelPosition: "left",
+      path: "/trackThree",
+      active: true,
+    },
+    { type: "text", label: ".", path: "#", active: false },
+    { type: "text", label: "FAQ", path: "/faq", active: true },
+    { type: "text", label: ".", path: "#", active: false },
     {
       type: "imageLink",
       imgSrc: ingeniousLogo,
       label: "Track 1",
-      path: "/",
+      labelPosition: "right",
+      path: "/trackOne",
       active: true,
     },
   ];
@@ -115,63 +119,72 @@ const LandingPage = () => {
 
       {/* ORBITAL MENU ITEMS */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        {menuItems.map((item, index) => {
-          const angle = (index / menuItems.length) * 2 * Math.PI - Math.PI / 3;
+        <div className="relative translate-y-[30px] translate-x-[-45px]">
+          {menuItems.map((item, index) => {
+            const angle =
+              (index / menuItems.length) * 2 * Math.PI - Math.PI / 3;
 
-          const outwardOffset = item.type === "imageLink" ? 80 : 0;
-          const itemRadus = radius + outwardOffset;
+            const outwardOffset = item.type === "imageLink" ? 80 : 0;
+            const itemRadus = radius + outwardOffset;
 
-          const x = Math.cos(angle) * itemRadus;
-          const y = Math.sin(angle) * itemRadus;
+            const x = Math.cos(angle) * itemRadus;
+            const y = Math.sin(angle) * itemRadus;
 
-          return (
-            <div
-              key={index}
-              className="absolute pointer-events-auto p-4 w-[90px] h-[90px] flex items-center justify-center"
-              style={{
-                transform: `translate(${x}px, ${y}px) rotate(${angle}rad)`,
-              }}
-            >
-              {/* Menu Item is a text link */}
-              {item.type === "text" && (
-                <Link
-                  to={item.active ? item.path : "#"}
-                  className={`font-megatrans transition-all duration-300 uppercase text-[15px] tracking-widest inline-block transform-gpu
-                                          ${
-                                            item.active
-                                              ? "text-[#C6FF00] cursor-pointer hover:brightness-125 hover:scale-110 [text-shadow:0_0_12px_rgba(198,255,0,0.8)]"
-                                              : "text-white/30 cursor-not-allowed pointer-events-none"
-                                          }`}
-                >
-                  {item.label}
-                </Link>
-              )}
-
-              {/* Menu Item is an image link */}
-              {item.type === "imageLink" && (
-                <Link
-                  to={item.active ? item.path : "#"}
-                  className="group relative pointer-events-auto flex items-center"
-                >
-                  <span className="absolute -inset-4 -z-10 rounded-full bg-gradient-to-r from-[#C6FF00]/60 via-[#C6FF00]/20 to-transparent blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  <img
-                    src={item.imgSrc}
-                    alt={item.label}
-                    className="w-[230px] h-[230px] object-contain transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_18px_rgba(198,255,0,0.85)]"
-                  />
-                  <span
-                    style={{ transform: `rotate(${-angle}rad)` }}
-                    className="ml-4 inline-flex items-center"
+            return (
+              <div
+                key={index}
+                className="absolute pointer-events-auto p-4 w-[90px] h-[90px] flex items-center justify-center"
+                style={{
+                  transform: `translate(${x}px, ${y}px) rotate(${angle}rad)`,
+                }}
+              >
+                {/* Menu Item is a text link */}
+                {item.type === "text" && (
+                  <Link
+                    to={item.active ? item.path : "#"}
+                    className={`font-megatrans transition-all duration-300 uppercase text-[20px] tracking-widest inline-block transform-gpu
+                      ${
+                        item.active
+                          ? "text-textBright cursor-pointer hover:brightness-125 hover:scale-110 [text-shadow:0_0_12px_rgba(198,255,0,0.8)]"
+                          : "text-white/30 cursor-not-allowed pointer-events-none"
+                      }`}
                   >
-                    <span className="whitespace-nowrap font-guardian-angle uppercase text-[30px] tracking-widest text-textBright no-underline opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                    <span
+                      style={{ transform: `rotate(${-angle}rad)` }}
+                      className="inline-block"
+                    >
                       {item.label}
                     </span>
-                  </span>
-                </Link>
-              )}
-            </div>
-          );
-        })}
+                  </Link>
+                )}
+
+                {/* Menu Item is an image link */}
+                {item.type === "imageLink" && (
+                  <Link
+                    to={item.active ? item.path : "#"}
+                    className="group relative pointer-events-auto flex items-center"
+                  >
+                    <span className="absolute -inset-4 -z-10 rounded-full bg-gradient-to-r from-textBright/60 via-textBright/20 to-transparent blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <img
+                      src={item.imgSrc}
+                      alt={item.label}
+                      style={{ transform: `rotate(${-angle}rad)` }}
+                      className="w-[230px] h-[230px] object-contain transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_18px_rgba(198,255,0,0.85)]"
+                    />
+                    <span
+                      style={{ transform: `rotate(${-angle}rad)` }}
+                      className="inline-flex items-center"
+                    >
+                      <span className="whitespace-nowrap font-guardian-angle uppercase text-[30px] tracking-widest text-textBright no-underline opacity-100 translate-x-0 transition-all duration-300 transform-gpu group-hover:scale-105">
+                        {item.label}
+                      </span>
+                    </span>
+                  </Link>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
