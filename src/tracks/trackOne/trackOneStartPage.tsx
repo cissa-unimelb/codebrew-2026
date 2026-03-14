@@ -5,6 +5,8 @@ import backgroundImage from "../../assets/images/timelineBackground.svg";
 import trackOneImage from "../../assets/images/ingenious.png";
 import trackOneDetailImage from "../../assets/images/trackOneDescriptionBox.png";
 
+import TrackDescriptionBox from "../../components/trackDescriptionBox";
+
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -144,27 +146,10 @@ export default function TrackOne() {
               >
                 <FaArrowLeft className="h-[16px] w-[16px]" aria-hidden="true" />
               </button>
-              <div className="pointer-events-none absolute inset-0 z-20 flex items-start justify-center">
-                <p className="m-0 text-red-500 text-[50px] font-guardian-angle translate-x-[20px] translate-y-[-30px]">
-                  Track 1
-                </p>
-              </div>
-              <div className="pointer-events-none absolute inset-0 z-20 flex items-start justify-center w-[300px] translate-x-[90px]">
-                <p className="m-0 text-red-500 text-[17px] font-space-grotesk translate-x-[10px] translate-y-[70px]">
-                  Lorem ipsum dolor sit amet consectetur. In eget vitae
-                  adipiscing pulvinar turpis molestie. Placerat cursus dictum
-                  odio sapien quisque pretium. Pulvinar amet malesuada orci nisi
-                  in. Neque neque cursus porta aliquam eleifend turpis ut
-                  aliquam. Sodales penatibus sollicitudin amet turpis enim
-                  tincidunt nunc aliquam. Quis viverra tempor erat pharetra
-                  lectus odio commodo. Molestie pellentesque enim tortor pretium
-                  nunc
-                </p>
-              </div>
-              <img
-                src={trackOneDetailImage}
-                alt="Track 1 detail"
-                className="w-full h-auto object-contain"
+              <TrackDescriptionBox
+                trackNumber={1}
+                description="This is the description for track 1 fdsahjfklhsadjfklhasdjklfhjasdklfhf fsd afsda fasd fasd fasd fasdfasd "
+                trackDetailImage={trackOneDetailImage}
               />
             </div>
           </div>

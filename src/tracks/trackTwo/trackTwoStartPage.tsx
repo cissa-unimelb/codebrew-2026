@@ -5,6 +5,8 @@ import backgroundImage from "../../assets/images/timelineBackground.svg";
 import trackTwoImage from "../../assets/images/arts.png";
 import trackTwoDetailImage from "../../assets/images/trackTwoDescriptionBox.png";
 
+import TrackDescriptionBox from "../../components/trackDescriptionBox";
+
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -135,7 +137,7 @@ export default function TrackOne() {
                   aria-label="See more"
                 >
                   <FaArrowRight
-                    className="h-[14px] w-[14px]"
+                    className="h-[20px] w-[20px]"
                     aria-hidden="true"
                   />
                 </button>
@@ -146,8 +148,8 @@ export default function TrackOne() {
           <div
             className={`absolute z-40 left-0 top-1/2 -translate-y-[45%] transition-all duration-900 ease-out ${
               isDetailTextVisible
-                ? "translate-x-0 opacity-100 delay-100"
-                : "-translate-x-[28vw] opacity-0 pointer-events-none"
+                ? "-translate-x-[850px] opacity-100 delay-100"
+                : "-translate-x-[1200px] opacity-0 pointer-events-none"
             }`}
           >
             <div className="relative w-[min(34vw,400px)]">
@@ -157,29 +159,12 @@ export default function TrackOne() {
                 className="absolute translate-x-[-70px] left-1 top-4 z-50 inline-flex h-[40px] w-[40px] items-center justify-center rounded-full border-none bg-textBright p-0 text-black transition-transform duration-300 hover:scale-110 cursor-pointer"
                 aria-label="Go back"
               >
-                <FaArrowLeft className="h-[16px] w-[16px]" aria-hidden="true" />
+                <FaArrowLeft className="h-[20px] w-[20px]" aria-hidden="true" />
               </button>
-              <div className="pointer-events-none absolute inset-0 z-20 flex items-start justify-center">
-                <p className="m-0 text-red-500 text-[50px] font-guardian-angle translate-x-[20px] translate-y-[-30px]">
-                  Track 2
-                </p>
-              </div>
-              <div className="pointer-events-none absolute inset-0 z-20 flex items-start justify-center w-[300px] translate-x-[90px]">
-                <p className="m-0 text-red-500 text-[17px] font-space-grotesk translate-x-[10px] translate-y-[70px]">
-                  Lorem ipsum dolor sit amet consectetur. In eget vitae
-                  adipiscing pulvinar turpis molestie. Placerat cursus dictum
-                  odio sapien quisque pretium. Pulvinar amet malesuada orci nisi
-                  in. Neque neque cursus porta aliquam eleifend turpis ut
-                  aliquam. Sodales penatibus sollicitudin amet turpis enim
-                  tincidunt nunc aliquam. Quis viverra tempor erat pharetra
-                  lectus odio commodo. Molestie pellentesque enim tortor pretium
-                  nunc
-                </p>
-              </div>
-              <img
-                src={trackTwoDetailImage}
-                alt="Track 2 detail"
-                className="w-full h-auto object-contain"
+              <TrackDescriptionBox
+                trackNumber={2}
+                description="This is the description for track 2"
+                trackDetailImage={trackTwoDetailImage}
               />
             </div>
           </div>
