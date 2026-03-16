@@ -5,6 +5,8 @@ import backgroundImage from "../../assets/images/timelineBackground.svg";
 import trackOneImage from "../../assets/images/ingenious.png";
 import trackOneDetailImage from "../../assets/images/trackOneDescriptionBox.png";
 
+import track1 from "../../assets/trackDetails/track1.json";
+
 import TrackDescriptionBox from "../../components/trackDescriptionBox";
 
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
@@ -103,7 +105,7 @@ export default function TrackOne() {
             </p>
 
             <h1 className="m-0 -mb-3 font-guardian-angle uppercase text-white text-[100px] tracking-[0.15em] leading-none">
-              Track 1
+              {track1.trackTitle}
             </h1>
 
             <div className="m-0 mt-[-40px] inline-flex items-center gap-3 font-megatrans text-white/80 text-[30px] tracking-[0.12em] leading-none">
@@ -148,7 +150,7 @@ export default function TrackOne() {
               </button>
               <TrackDescriptionBox
                 trackNumber={1}
-                description="This is the description for track 1 fdsahjfklhsadjfklhasdjklfhjasdklfhf fsd afsda fasd fasd fasd fasdfasd "
+                description={track1.trackDescriptionDetailPage}
                 trackDetailImage={trackOneDetailImage}
               />
             </div>

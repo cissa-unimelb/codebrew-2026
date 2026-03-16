@@ -7,6 +7,8 @@ import trackThreeDetailImage from "../../assets/images/trackThreeDescriptionBox.
 
 import TrackDescriptionBox from "../../components/trackDescriptionBox";
 
+import track3 from "../../assets/trackDetails/track3.json";
+
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -103,7 +105,7 @@ export default function TrackOne() {
             </p>
 
             <h1 className="m-0 -mb-3 font-guardian-angle uppercase text-white text-[100px] tracking-[0.15em] leading-none">
-              Track 3
+              {track3.trackTitle}
             </h1>
 
             <div className="m-0 mt-[-40px] inline-flex items-center gap-3 font-megatrans text-white/80 text-[30px] tracking-[0.12em] leading-none">
@@ -148,7 +150,7 @@ export default function TrackOne() {
               </button>
               <TrackDescriptionBox
                 trackNumber={3}
-                description="This is the description for track 3"
+                description={track3.trackDescriptionDetailPage}
                 trackDetailImage={trackThreeDetailImage}
               />
             </div>
