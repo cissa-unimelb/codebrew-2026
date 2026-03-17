@@ -1,10 +1,10 @@
-import backgroundImage from "./assets/images/LandingPageBackground.svg";
-import codebrewLogo from "./assets/icons/codebrewLogo.svg";
-import cissaLogo from "./assets/icons/cissalogo.svg";
+import backgroundImage from "../assets/images/LandingPageBackground.svg";
+import codebrewLogo from "../assets/icons/codebrewLogo.svg";
+import cissaLogo from "../assets/icons/cissalogo.svg";
 
-import ingeniousLogo from "./assets/images/ingenious.png";
-import stemLogo from "./assets/images/stem.png";
-import artsLogo from "./assets/images/arts.png";
+import ingeniousLogo from "../assets/images/ingenious.png";
+import stemLogo from "../assets/images/stem.png";
+import artsLogo from "../assets/images/arts.png";
 
 import TrackDescriptionBoxMenuPage from "../components/menuPageTrackDescriptionBox";
 
@@ -148,7 +148,7 @@ const LandingPage = () => {
       </div>
 
       {/* ORBITAL MENU ITEMS */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 fade-in">
         <div className="relative translate-y-[30px] translate-x-[-45px]">
           {menuItems.map((item, index) => {
             const angle =

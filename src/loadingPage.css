@@ -1,0 +1,67 @@
+@keyframes loadingDot {
+    0%,
+    20% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.loading-dot {
+    display: inline-block;
+    animation: loadingDot 1.2s infinite;
+}
+
+.loading-dot-2 {
+    animation-delay: 0.2s;
+}
+
+.loading-dot-3 {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1000ms ease-out forwards;
+}
+
+@keyframes orbitRingExpand {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.2;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+    }
+}
+
+.orbit-ring {
+    position: absolute;
+    border: 1px solid rgba(229, 231, 232, 0.25);
+    border-radius: 9999px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.orbit-ring-loading {
+    width: 0;
+    height: 0;
+    opacity: 0.2;
+    animation: orbitRingExpand 3000ms ease-out forwards;
+}
