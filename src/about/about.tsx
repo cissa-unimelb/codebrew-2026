@@ -16,7 +16,7 @@ export default function About() {
       <Header />
 
       <main className="flex grow flex-col justify-center z-100 relative w-full mt-[-55vh] mb-[25vh]">
-      
+
         <div className="px-[12.5%] flex flex-col gap-y-4 mx-full ">
 
           <div className="flex flex-col gap-y-[0.25em]">
@@ -27,8 +27,8 @@ export default function About() {
               </span>
 
               <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
-                Codebrew is CISSA’s annual flagship hackathon and one of the largest hackathons in Melbourne. 
-                Over a ~72 hour period, participants will have a chance to ideate, innovate and develop a tech project from scratch. 
+                Codebrew is CISSA’s annual flagship hackathon and one of the largest hackathons in Melbourne.
+                Over a ~72 hour period, participants will have a chance to ideate, innovate and develop a tech project from scratch.
                 It is a chance to compete for prizes, socialize with fellow contestants, and meet industry professionals over an exhilarating 4 days!
               </p>
             </div>
@@ -41,27 +41,27 @@ export default function About() {
 
           <div className="grid grid-cols-4 gap-6 w-full">
             {cardData.map((card, i) => (
-            <div key={i} className="group relative w-full aspect-square cursor-pointer">
-              
-              <img
-                src={aboutSquare}
-                alt=""
-                className="absolute inset-0 w-[90%] h-full object-fill transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(198,255,0,0.8)]"
-              />
+              <div key={i} className="group relative w-full aspect-square cursor-pointer">
 
-              <div className="absolute inset-0 w-[90%] h-full pointer-events-none">
-                <h3 className="absolute top-[3%] left-[6%] font-megatrans text-[clamp(0.8rem,1.4vw,1.8rem)] uppercase font-bold leading-none text-primary">
-                  {card.title}
-                </h3>
+                <img
+                  src={aboutSquare}
+                  alt=""
+                  className="absolute inset-0 w-[90%] h-full object-fill transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(198,255,0,0.8)]"
+                />
 
-                <div className="absolute top-[22%] bottom-[12%] left-[15%] right-[15%] flex items-center justify-center">
-                  <p className="font-space-grotesk text-[clamp(0.1rem,0.75vw,1rem)] text-text opacity-90 leading-normal text-center">
-                    {card.text}
-                  </p>
+                <div className="absolute inset-0 w-[90%] h-full pointer-events-none">
+                  <h3 className="absolute top-[3%] left-[6%] font-megatrans text-[clamp(0.8rem,1.4vw,1.8rem)] uppercase font-bold leading-none text-primary">
+                    {card.title}
+                  </h3>
+
+                  <div className="absolute top-[22%] bottom-[12%] left-[15%] right-[15%] flex items-center justify-center">
+                    <p className="font-space-grotesk text-[clamp(0.1rem,0.75vw,1rem)] text-text opacity-90 leading-normal text-center">
+                      {card.text}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
           </div>
 
           <div className="flex flex-col">
@@ -71,7 +71,7 @@ export default function About() {
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed w-[45%]">
                 Create a product that you are proud of instead of procastinating and never finishing a project
               </p>
 
@@ -79,7 +79,7 @@ export default function About() {
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed w-[45%]">
                 Create life long memories along friends whilst burning your passion for an interesting problem
               </p>
             </div>
@@ -88,7 +88,7 @@ export default function About() {
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed w-[45%]">
                 Explore the true limits and possibilities of your abilities
               </p>
 
@@ -96,7 +96,7 @@ export default function About() {
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed w-[45%]">
                 Network and connect with likeminded individuals, opening doors to the unforeseeable bright future
               </p>
             </div>
@@ -107,5 +107,5 @@ export default function About() {
 
       <Footer />
     </div>
-) 
+  )
 }
