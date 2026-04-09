@@ -139,7 +139,7 @@ export default function TrackOne() {
                 : "-translate-x-[28vw] opacity-0 pointer-events-none"
             }`}
           >
-            <div className="relative w-[min(34vw,400px)]">
+            <div className="relative w-[min(40vw,400px)]">
               <button
                 type="button"
                 onClick={handleBackClick}

@@ -25,8 +25,8 @@ const TrackDescriptionBox = ({
       </div>
 
       {/* Description box placed inside the empty area */}
-      <div className="absolute z-20 top-[110px] left-[50%] -translate-x-[100px] translate-y-[20px] w-[240px]">
-        <div className="text-red-500 text-[17px] font-space-grotesk whitespace-normal wrap-break-word leading-relaxed">
+      <div className="absolute z-20 top-[110px] left-[60%] -translate-x-[100px] translate-y-[1px] w-[250px]">
+        <div className="text-red-500 text-[14.5px] font-space-grotesk whitespace-normal wrap-break-word leading-relaxed">
           {description}
         </div>
       </div>
