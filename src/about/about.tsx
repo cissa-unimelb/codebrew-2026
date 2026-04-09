@@ -4,10 +4,10 @@ import Header from './header';
 import aboutSquare from '../assets/images/aboutSquare.svg';
 
 const cardData = [
-  { title: "MENTORS", text: "Lorem ipsum dolor sit amet hell hello hello hellohello hello  hello ..." },
-  { title: "PRIZES", text: "Lorem ipsum dolor sit amet..." },
-  { title: "AWARDS", text: "Lorem ipsum dolor sit amet..." },
-  { title: "CONNECT", text: "Lorem ipsum dolor sit amet..." },
+  { title: "MENTORS", text: "We have excellent mentors and judges from companies like Canva, Atlassian, Twillio, Lyra, and etc" },
+  { title: "PRIZES", text: "With a prize pool of 1.95k AUD it is impossible to ignore the possibilities" },
+  { title: "AWARDS", text: "Codebrew is recognized within the industry as a serious hackathon to participate in" },
+  { title: "CONNECT", text: "Connect with our varied amount of connections from prestigious to wise alumnis" },
 ];
 
 export default function About() {
@@ -16,7 +16,7 @@ export default function About() {
       <Header />
 
       <main className="flex grow flex-col justify-center z-100 relative w-full mt-[-55vh] mb-[25vh]">
-      
+
         <div className="px-[12.5%] flex flex-col gap-y-4 mx-full ">
 
           <div className="flex flex-col gap-y-[0.25em]">
@@ -27,9 +27,9 @@ export default function About() {
               </span>
 
               <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Codebrew is CISSA’s annual flagship hackathon and one of the largest hackathons in Melbourne.
+                Over a ~72 hour period, participants will have a chance to ideate, innovate and develop a tech project from scratch.
+                It is a chance to compete for prizes, socialize with fellow contestants, and meet industry professionals over an exhilarating 4 days!
               </p>
             </div>
           </div>
@@ -41,27 +41,27 @@ export default function About() {
 
           <div className="grid grid-cols-4 gap-6 w-full">
             {cardData.map((card, i) => (
-            <div key={i} className="group relative w-full aspect-square cursor-pointer">
-              
-              <img
-                src={aboutSquare}
-                alt=""
-                className="absolute inset-0 w-[90%] h-full object-fill transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(198,255,0,0.8)]"
-              />
+              <div key={i} className="group relative w-full aspect-square cursor-pointer">
 
-              <div className="absolute inset-0 w-[90%] h-full pointer-events-none">
-                <h3 className="absolute top-[3%] left-[6%] font-megatrans text-[clamp(0.8rem,1.4vw,1.8rem)] uppercase font-bold leading-none text-primary">
-                  {card.title}
-                </h3>
+                <img
+                  src={aboutSquare}
+                  alt=""
+                  className="absolute inset-0 w-[90%] h-full object-fill transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(198,255,0,0.8)]"
+                />
 
-                <div className="absolute top-[22%] bottom-[12%] left-[15%] right-[15%] flex items-center justify-center">
-                  <p className="font-space-grotesk text-[clamp(0.1rem,0.75vw,1rem)] text-text opacity-90 leading-normal text-center">
-                    {card.text}
-                  </p>
+                <div className="absolute inset-0 w-[90%] h-full pointer-events-none">
+                  <h3 className="absolute top-[3%] left-[6%] font-megatrans text-[clamp(0.8rem,1.4vw,1.8rem)] uppercase font-bold leading-none text-primary">
+                    {card.title}
+                  </h3>
+
+                  <div className="absolute top-[22%] bottom-[12%] left-[15%] right-[15%] flex items-center justify-center">
+                    <p className="font-space-grotesk text-[clamp(0.1rem,0.75vw,1rem)] text-text opacity-90 leading-normal text-center">
+                      {card.text}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
           </div>
 
           <div className="flex flex-col">
@@ -71,16 +71,16 @@ export default function About() {
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed w-[45%]">
+                Create a product that you are proud of instead of procastinating and never finishing a project
               </p>
 
               <span className="text-[1vw] pt-[0.4em] opacity-90 flex-shrink-0">
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed w-[45%]">
+                Create life long memories along friends whilst burning your passion for an interesting problem
               </p>
             </div>
             <div className="flex flex-row items-baseline gap-x-[2em]">
@@ -88,16 +88,16 @@ export default function About() {
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed w-[45%]">
+                Explore the true limits and possibilities of your abilities
               </p>
 
               <span className="text-[1vw] pt-[0.4em] opacity-90 flex-shrink-0">
                 ▶
               </span>
 
-              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              <p className="font-space-grotesk text-[1.2vw] opacity-90 leading-relaxed w-[45%]">
+                Network and connect with likeminded individuals, opening doors to the unforeseeable bright future
               </p>
             </div>
           </div>
@@ -107,5 +107,5 @@ export default function About() {
 
       <Footer />
     </div>
-) 
+  )
 }
